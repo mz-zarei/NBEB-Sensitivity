@@ -4,7 +4,7 @@
 # Created By  : Mohammad Zarei
 # Created Date: 10 Apr 2020
 # ---------------------------------------------------------------------------
-"""Implentation of propsoed method to determine network screening sensitivity to AADT error"""
+"""Implentation of empirical Bayes estimation using NB model"""
 # ---------------------------------------------------------------------------
 # Imports
 
