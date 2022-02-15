@@ -1,2 +1,3 @@
-# NBEB_sensitivity
-Studying sensitivity of NS outcome to AADT error
+# NBEB Sensitivity
+
+A project to study the sensitivity of Network Screening outcomes to AADT uncertainty
