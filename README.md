@@ -1,3 +1,3 @@
 # NBEB Sensitivity
 
-A project to study the sensitivity of Network Screening outcomes to AADT uncertainty
+Conventional road safety network screening relies on measures of historical crash data and annual average daily traffic (AADT) as a measure of exposure to develop safety performance functions.  AADT is typically estimated from short-term counts and contains error which can negatively impact network screening outcomes and result in the inefficient allocation of safety improvement resources. In this paper, we propose a simulation-based method for quantifying the monetary benefit of improving AADT accuracy. The results of applying the method under various conditions show that crash data sets with lower sample mean and dispersion parameter values benefit more from improving AADT accuracy. In addition, the monetary value of this benefit is estimated in a real-world example using the proposed method.
