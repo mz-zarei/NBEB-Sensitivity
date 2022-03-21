@@ -238,6 +238,15 @@ def NBEBranking(CrashData, alpha, y_name='Obs'):
 
     return CrashData['rank']
 
+def NBPSIranking(CrashData, alpha, y_name='Obs'):
+
+    CrashData['w'] = 1/(1+alpha*CrashData['NB_pred']) 
+    CrashData['EB'] = CrashData['w'] * CrashData['NB_pred']  + (1-CrashData['w']) * CrashData[y_name]
+    CrashData['PSI'] = CrashData['EB'] - CrashData['NB_pred']
+    CrashData['rank'] = CrashData['PSI'].rank(pct=True)
+
+    return CrashData['rank']
+
 def FI(results):
     FI_test = 0
     for HS_level in [0.02,0.04,0.06,0.08,0.1]:
