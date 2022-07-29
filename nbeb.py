@@ -144,7 +144,7 @@ def fitNB(data, features, y_name='Obs'):
 
     disperssion, disperssion_se = computeDisperssion(data, features, y_name)
 
-    NB_model = sm.GLM(y, X, family=sm.families.NegativeBinomial(alpha = disperssion)).fit()
+    NB_model = sm.GLM(y, X, family=sm.families.NegativeBinomial(alpha = max(0.05,disperssion))).fit()
     y_pred_NB = pd.DataFrame(NB_model.predict(X))
     return NB_model, disperssion
 
