@@ -269,10 +269,10 @@ def CURE(data, y_name= 'Obs', ftot='Ftot', y_pred = 'y_pred'):
 
     data['e1'] = data['res'].cumsum()
     data['e2'] = data['res_sq'].cumsum()
-    data['e3'] = data['e2']*((1 - data['e2']/data['e2'][len(data['e2'])-1]))
+    data['e3'] = np.sqrt(data['e2']*((1 - data['e2']/data['e2'][len(data['e2'])-1])))
 
-    plt.plot(data[ftot], data['e3'], linestyle = 'dotted', label = "2$\sigma$")
-    plt.plot(data[ftot], -data['e3'], linestyle = 'dotted', label = "-2$\sigma$")
+    plt.plot(data[ftot], 1.96*data['e3'], linestyle = 'dotted', label = "2$\sigma$")
+    plt.plot(data[ftot], -1.96*data['e3'], linestyle = 'dotted', label = "-2$\sigma$")
     plt.plot(data[ftot], data['e1'], label = "Cum. Residuals")
     plt.legend(loc='lower right')
     plt.xlabel('Total AADT')
